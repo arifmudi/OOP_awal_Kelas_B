@@ -37,19 +37,19 @@ class mahasiswa{
   }
 }
 
-$sri_wiji_astuti = new mahasiswa();
-$sri_wiji_astuti->set_name('Sri_Wiji_Astuti');
-$sri_wiji_astuti->set_nim('2255201058');
-$sri_wiji_astuti->set_mata_kuliah('pbo');
-$sri_wiji_astuti->set_dosen_killer('arif mudi priyanto.s.t.m.kom');
+$Sri_wiji_astuti = new mahasiswa();
+$Sri_wiji_astuti->set_name('Sri_wiji_astuti');
+$Sri_wiji_astuti->set_nim('2255201058');
+$Sri_wiji_astuti->set_mata_kuliah('Pemrograman_Berorientasi_Objek');
+$Sri_wiji_astuti->set_dosen_killer('bapak arip');
 
-echo $sri_wiji_astuti ->get_name();
+echo $Sri_wiji_astuti ->get_name();
 echo "<br>";
-echo $sri_wiji_astuti ->get_nim();
+echo $Sri_wiji_astuti ->get_nim();
 echo "<br>";
-echo $sri_wiji_astuti ->get_mata_kuliah();
+echo $Sri_wiji_astuti ->get_mata_kuliah();
 echo "<br>";
-echo $sri_wiji_astuti ->get_dosen_killer();
+echo $Sri_wiji_astuti ->get_dosen_killer();
 
 
 
