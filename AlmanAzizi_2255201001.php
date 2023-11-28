@@ -5,44 +5,42 @@ class Mahasiswa {
   private $NIM;
   private $Mata_Kuliah;
   private $Dosen_Killer;
+  private $citacitaden;
 
   // Methods
-  function set_nama($Name) {
-    $this->Nama = $Name;
-  }
-  function get_nama() {
+   public function __construct($Nama, $NIM, $Mata_Kuliah, $Dosen_Killer, $citacitaden){
+    $this->Nama = $Nama;
+    $this->NIM = $NIM;
+    $this->Mata_Kuliah = $Mata_Kuliah;
+    $this->Dosen_Killer = $Dosen_Killer;
+    $this->citacitaden =  $citacitaden;
+ }    
+  function get_Nama() {
     return $this->Nama;
   }
-  function set_nim($NIM) {
-    $this->NIM = $NIM;
-  }
-  function get_nim() {
+  function get_NIM() {
     return $this->NIM;
   }
-  function set_matkul($Mata_Kuliah) {
-    $this->Mata_Kuliah = $Mata_Kuliah;
-  }
-  function get_matkul() {
+  function get_Mata_Kuliah() {
     return $this->Mata_Kuliah;
   }
-  function set_dosen_killer($Dosen_Killer) {
-    $this->Dosen_Killer = $Dosen_Killer;
-  }
-  function get_dosen_killer() {
+  function get_Dosen_Killer() {
     return $this->Dosen_Killer;
+  }
+    function get_citacitaden() {
+    return $this->citacitaden;
   }
 }
 
-$almann = new Mahasiswa();
-$almann->set_nama('Alman Azizi');
-echo $almann->get_nama();
-echo "\n";
-$almann->set_nim('2255201001');
-echo $almann->get_nim();
-echo "\n";
-$almann->set_matkul('pbo');
-echo $almann->get_matkul();
-echo "\n";
-$almann->set_dosen_killer('pak arif ');
-echo $almann->get_dosen_killer();
-echo "\n";
+$almann = new Mahasiswa('alman', '2255201001', 'pbo', 'pak arif', 'rangkayo');
+echo $almann->get_Nama();
+echo "<br>";
+echo $almann->get_NIM();
+echo "<br>";
+echo $almann->get_Mata_Kuliah();
+echo "<br>";
+echo $almann->get_Dosen_Killer();
+echo "<br>";
+echo $almann->get_citacitaden();
+echo "<br>";
+?>
