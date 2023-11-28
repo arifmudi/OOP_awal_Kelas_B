@@ -2,47 +2,43 @@
 <?php
 class Mahasiswa {
   // Properties
-  public $Nama;
-  public $NIM;
-  public $Mata_Kuliah;
-  public $Dosen_Killer;
+  private $Nama;
+  private $NIM;
+  private $Mata_Kuliah;
+  private $Dosen_Killer;
+  private $Cita_cita;
 
   // Methods
-  function set_nama($nama) {
-    $this->nama = $nama;
+  function __construct($Nama, $NIM, $Mata_Kuliah, $Dosen_Killer, $Cita_cita){
+  $this->Nama = $Nama;
+  $this->NIM = $NIM;
+  $this->Mata_Kuliah = $<Mata_Kuliah;
+  $this->Dosen_Killer = $Dosen_Killer;
+  $this->Cita_cita = $Cita_cita;
   }
+  
   function get_nama() {
     return $this->nama;
-  }
-  function set_nim($NIM) {
-    $this->nim = $NIM;
   }
   function get_nim() {
     return $this->nim;
   }
-  function set_matkul($Mata_Kuliah) {
-    $this->matkul = $Mata_Kuliah;
-  }
   function get_matkul() {
     return $this->matkul;
-  }
-  function set_doskil($Dosen_Killer) {
-    $this->doskil = $Dosen_Killer;
   }
   function get_doskil() {
     return $this->doskil;
   }
+  function get_cita() {
+    return $this->Cita_cita;
+  }
 }
 
-$sekar = new Mahasiswa();
-$sekar->set_nama('Sekar melati');
+$sekar = new Mahasiswa('Sekar Melati', '2155201030', 'PBO', 'pak arif mudi priyatno', 'istrijekey');
 echo $sekar->get_nama();
-$sekar->set_nim('2155202030');
-echo "\n";
 echo $sekar->get_nim();
-$sekar->set_matkul('PBO');
 echo $sekar->get_matkul();
-$sekar->set_doskil('pak arif mudi priyatno');
 echo $sekar->get_doskil();
+echo $sekar->get_cita();
 ?>
  
