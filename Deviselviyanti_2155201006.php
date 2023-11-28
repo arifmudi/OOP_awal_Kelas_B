@@ -5,41 +5,42 @@ class Mahasiswa {
   private $NIM;
   private $Mata_Kuliah;
   private $Dosen_Killer;
+  private $Cita_cita;
 
   // Methods
-  function set_nama($Name) {
+  function __construct($Name, $NIM, $Mata_kuliah, $Dosen_Killer, $Cita_cita) {
     $this->Nama = $Name;
+    $this->NIM = $NIM;
+    $this->Mata_Kuliah = $Mata_kuliah;
+    $this->Dosen_Killer = $Dosen_Killer;
+    $this->Cita_cita = $Cita_cita;
   }
   function get_nama() {
     return $this->Nama;
   }
-  function set_nim($NIM) {
-    $this->NIM = $NIM;
-  }
   function get_nim() {
     return $this->NIM;
-  }
-  function set_matkul($Mata_Kuliah) {
-    $this->Mata_Kuliah = $Mata_Kuliah;
   }
   function get_matkul() {
     return $this->Mata_Kuliah;
   }
-  function set_dokil($Dosen_Killer) {
-    $this->Dosen_Killer = $Dosen_Killer;
-  }
   function get_dokil() {
     return $this->Dosen_Killer;
   }
+  function get_cita() {
+    return $this->Cita_cita;
+  }
+
 }
 
-$selvi = new Mahasiswa();
-$selvi->set_nama('Devi Selvi Yanti');
+$selvi = new Mahasiswa('Devi Selvi Yanti','2155201006','program berorientasi objek','bapak arif mudi priyatno','istrisunwoo');
 echo $selvi->get_nama();
-$selvi->set_nim('2155201006');
+echo "<br>";
 echo $selvi->get_nim();
-$selvi->set_matkul('program berorientasi objek');
+echo "<br>";
 echo $selvi->get_matkul();
-$selvi->set_dokil('bapak arif mudi priyatno');
+echo "<br>";
 echo $selvi->get_dokil();
+echo "<br>";
+echo $selvi->get_cita();
 ?>
