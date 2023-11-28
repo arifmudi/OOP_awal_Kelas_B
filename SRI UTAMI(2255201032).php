@@ -37,19 +37,19 @@ class mahasiswa{
   }
 }
 
-$Hayuda_putra_pratama = new mahasiswa();
-$Hayuda_putra_pratama->set_name('Hayuda_putra_pratama');
-$Hayuda_putra_pratama->set_nim('2255201041');
-$Hayuda_putra_pratama->set_mata_kuliah('pbo');
-$Hayuda_putra_pratama->set_dosen_killer('arif mudi priyanto.s.t.m.kom');
+$sri_utami= new mahasiswa();
+$sri_utami->set_name('Sri_Utami');
+$sri_utami->set_nim('2255201032');
+$sri_utami->set_mata_kuliah('pbo');
+$sri_utami->set_dosen_killer('Arif Mudi Priyanto.s.t.m.kom');
 
-echo $Hayuda_putra_pratama ->get_name();
+echo $sri_utami->get_name();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_nim();
+echo $sri_utami ->get_nim();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_mata_kuliah();
+echo $sri_utami ->get_mata_kuliah();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_dosen_killer();
+echo $sri_utami->get_dosen_killer();
 
 
 
