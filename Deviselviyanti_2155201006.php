@@ -29,6 +29,9 @@ class Mahasiswa {
   }
   function get_cita() {
     return $this->Cita_cita;
+  }
+
+
 }
 
 $selvi = new Mahasiswa('Devi Selvi Yanti','2155201006','program berorientasi objek','bapak arif mudi priyatno','istrisunwoo');
