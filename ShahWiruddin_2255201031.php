@@ -37,18 +37,18 @@ class Mahasiswa {
   }
 }
 
-$DesriInsani = new Mahasiswa();
-$DesriInsani->set_Nama('DesriInsani');
-echo $DesriInsani->get_Nama();
+$ShahWiruddin = new Mahasiswa();
+$ShahWiruddin->set_Nama('ShahWiruddin');
+echo $ShahWiruddin->get_Nama();
 echo "<br>";
-$DesriInsani->set_NIM('2255201016');
-echo $DesriInsani->get_NIM();
+$ShahWiruddin->set_NIM('2255201031');
+echo $ShahWiruddin->get_NIM();
 echo "<br>";
-$DesriInsani->set_MataKuliah('PBO');
-echo $DesriInsani->get_MataKuliah();
+$ShahWiruddin->set_MataKuliah('PBO');
+echo $ShahWiruddin->get_MataKuliah();
 echo "<br>";
-$DesriInsani->set_dosenkiller('Melati');
-echo $DesriInsani->get_dosenkiller();
+$ShahWiruddin->set_dosenkiller('Megawati');
+echo $ShahWiruddin->get_dosenkiller();
 
 ?>
  
