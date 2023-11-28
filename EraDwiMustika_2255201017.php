@@ -9,47 +9,44 @@ class Mahasiswa {
   private $Nim;
   private $MataKuliah;
   private $DosenKiller;
+  private $Citacita;
 
   // Methods
-  function set_Nama($Nama) {
+  function __construct($Nama,$Nim,$MataKuliah,$DosenKiller,$Citacita) {
     $this->Nama = $Nama;
+    $this->Nim = $Nim;
+    $this->MataKuliah = $MataKuliah;
+    $this->DosenKiller = $DosenKiller;
+    $this->Citacita = $Citacita;
   }
   function get_Nama() {
     return $this->Nama;
   }
-  function set_Nim($Nim) {
-    $this->Nim = $Nim;
-  }
   function get_Nim() {
     return $this->Nim;
-  }
-  function set_MataKuliah($MataKuliah) {
-    $this->MataKuliah = $MataKuliah;
   }
   function get_MataKuliah() {
     return $this->MataKuliah;
   }
-  function set_DosenKiller($DosenKiller) {
-    $this->DosenKiller = $DosenKiller;
-  }
   function get_DosenKiller() {
     return $this->DosenKiller;
+  }
+  function get_Citacita() {
+    return $this->Citacita;
   }
   
 }
 
-$EraDwiMustika = new Mahasiswa();
-$EraDwiMustika->set_Nama('EraDwiMustika');
+$EraDwiMustika = new Mahasiswa('EraDwiMustika','2255201017','Pbo','era','sukses');
 echo $EraDwiMustika->get_Nama();
 echo "<br>";
-$EraDwiMustika->set_Nim('2255201017');
 echo $EraDwiMustika->get_Nim();
 echo "<br>";
-$EraDwiMustika->set_MataKuliah('Pbo');
 echo $EraDwiMustika->get_MataKuliah();
 echo "<br>";
-$EraDwiMustika->set_DosenKiller('era');
 echo $EraDwiMustika->get_DosenKiller();
+echo "<br>";
+echo $EraDwiMustika->get_Citacita();
 
 ?>
  
