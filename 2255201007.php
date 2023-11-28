@@ -9,40 +9,39 @@ class Mahasiswa {
   private $NIM;
   private $Mata_kuliah;
   private $Dosen_killer;
+  private $Cita_cita;
+  
+   function __construct($Nama, $NIM, $Mata_kuliah, $Dosen_killer, $Cita_cita){
+    $this->Nama = $Nama;
+    $this->NIM = $NIM;
+	$this->Mata_kuliah = $Mata_kuliah;
+    $this->Dosen_killer = $Dosen_killer;
+	$this->Cita_cita = $Cita_cita;
+   }  
 
   // Methods
-  function set_Nama($Nama) {
-    $this->Nama = $Nama;
-  }
   function get_Nama() {
     return $this->Nama;
   }
-    function set_NIM($NIM) {
-    $this->NIM = $NIM;
-  }
+ 
   function get_NIM() {
     return $this->NIM;
   }
-    function set_Mata_kuliah($Mata_kuliah) {
-    $this->Mata_kuliah = $Mata_kuliah;
-  }
+  
   function get_Mata_kuliah() {
     return $this->Mata_kuliah;
   }
-    function set_Dosen_killer($Dosen_killer) {
-    $this->Dosen_killer = $Dosen_killer;
-  }
+ 
   function get_Dosen_killer() {
     return $this->Dosen_killer;
   }
+  
+   function get_Cita_cita() {
+    return $this->Cita_cita;
+  }
 }
 
-$nata = new Mahasiswa();
-
-$nata->set_Nama('nata');
-$nata->set_NIM('2255201007');
-$nata->set_Mata_kuliah('pbo');
-$nata->set_Dosen_killer('pak arif');
+$nata = new Mahasiswa("nata", "2255201007", "pbo", "pak arif", "sawit10H" );
 
 echo $nata->get_Nama();
 echo "<br>";
@@ -51,7 +50,9 @@ echo "<br>";
 echo $nata->get_Mata_kuliah();
 echo "<br>";
 echo $nata->get_Dosen_killer();
-?>
- 
+echo "<br>";
+echo $nata->get_Cita_cita();
+?> 
+  
 </body>
 </html>
