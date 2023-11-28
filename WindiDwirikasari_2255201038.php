@@ -9,47 +9,44 @@ class mahasiswa {
   private $nim;
   private $mataKuliah;
   private $dosenKiler;
+  private $citacita;
 
 
   // Methods
-  function set_nama($nama) {
+  function __construct($nama,$nim,$mataKuliah,$dosenKiler,$citacita) {
     $this->nama = $nama;
+    $this->nim = $nim;
+    $this->mataKuliah= $mataKuliah;
+    $this->dosenKiler = $dosenKiler;
+    $this->citacita = $citacita;
   }
   function get_nama() {
     return $this->nama;
-  }
-  function set_nim($nim) {
-    $this->nim = $nim;
-  }
+  } 
   function get_nim() {
-    return $this->nim;
+    return $this->nim; 
   }
-  function set_matakuliah($matakuliah) {
-    $this->matakuliah = $matakuliah;
+  function get_mataKuliah() {
+    return $this->mataKuliah;
   }
-  function get_matakuliah() {
-    return $this->matakuliah;
+  function get_dosenKiler() {
+    return $this->dosenKiler;
   }
-  function set_dosenkiler($dosenkiler) {
-    $this->dosenkiler = $dosenkiler;
-  }
-  function get_dosenkiler() {
-    return $this->dosenkiler;
-  }
+  function get_citacita() {
+    return $this->citacita;
+ }
 }
 
-$WindiDwiRikasari = new mahasiswa();
-$WindiDwiRikasari->set_nama('WindiDwiRikasari');
+$WindiDwiRikasari = new mahasiswa('WindiDwiRikasari','2255201038','pbo','wanda','berhasil');
 echo $WindiDwiRikasari->get_nama();
 echo "<br>";
-$WindiDwiRikasari->set_nim('2255201038');
 echo $WindiDwiRikasari->get_nim();
 echo "<br>";
-$WindiDwiRikasari->set_matakuliah('pbo');
-echo $WindiDwiRikasari->get_matakuliah();
+echo $WindiDwiRikasari->get_mataKuliah();
 echo "<br>";
-$WindiDwiRikasari->set_dosenkiler('wanda');
-echo $WindiDwiRikasari->get_dosenkiler();
+echo $WindiDwiRikasari->get_dosenKiler();
+echo "<br>";
+echo $WindiDwiRikasari->get_citacita();
 
 
 ?>
