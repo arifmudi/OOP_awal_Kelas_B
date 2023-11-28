@@ -38,16 +38,16 @@ class Mahasiswa {
   }
 }
 
-$PutraRamadan = new Mahasiswa('PutraRamadan', '2255201005', 'PBO', 'Citra', 'Youtuber');
-echo $PutraRamadan->get_Nama();
+$Agussalim = new Mahasiswa('Agussalim', '2255201010', 'PBO', 'Megawati', 'Sugeh');
+echo $Agussalim->get_Nama();
 echo "<br>";
-echo $PutraRamadan->get_NIM();
+echo $Agussalim->get_NIM();
 echo "<br>";
-echo $PutraRamadan->get_MataKuliah();
+echo $Agussalim->get_MataKuliah();
 echo "<br>";
-echo $PutraRamadan->get_dosenkiller();
+echo $Agussalim->get_dosenkiller();
 echo "<br>";
-echo $PutraRamadan->get_citacita();
+echo $Agussalim->get_citacita();
 ?>
 
 </body>
