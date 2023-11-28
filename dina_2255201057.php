@@ -1,62 +1,52 @@
+
 <!DOCTYPE html>
 <html>
 <body>
 
 <?php
-class mahasiswa{
+class Mahasiswa {
   // Properties
-  private $name;
-  private $nim;
-  private $mata_kuliah;
-  private $dosen_killer;
+  private $Nama;
+  private $Nim;
+  private $MataKuliah;
+  private $DosenKiller;
+  private $citacita;
 
-  // Methods
-  function set_name($name) {
-    $this->name = $name;
+  public function __construct($Nama, $Nim, $MataKuliah, $DosenKiller, $citacita){
+    $this->Nama = $Nama;
+    $this->Nim = $Nim;
+    $this->MataKuliah = $MataKuliah;
+    $this->DosenKiller = $DosenKiller;
+    $this->citacita = $citacita;
   }
-  function get_name() {
-    return $this->name;
+  function get_Nama() {
+    return $this->Nama;
   }
-  function set_nim($nim) {
-    $this->nim = $nim;
+  function get_Nim() {
+    return $this->Nim;
   }
-  function get_nim() {
-    return $this->nim;
+  function get_MataKuliah() {
+    return $this->MataKuliah;
   }
-   function set_mata_kuliah($mata_kuliah) {
-    $this->mata_kuliah= $mata_kuliah;
+  function get_DosenKiller() {
+    return $this->DosenKiller;
   }
-  function get_mata_kuliah() {
-    return $this->mata_kuliah;
-  }
-  function set_dosen_killer($dosen_killer) {
-    $this->dosen_killer= $dosen_killer;
-  }
-  function get_dosen_killer() {
-    return $this->dosen_killer;
+  function get_citacita() {
+    return $this->citacita;
   }
 }
 
-$dina = new mahasiswa();
-$dina->set_name('dina');
-$dina->set_nim('2255201057');
-$dina->set_mata_kuliah('pbo');
-$dina->set_dosen_killer('PakArif');
-
-echo $dina->get_name();
+$dina = new Mahasiswa('dina','2255201057','PBO','PakArif', 'jaya');
+echo $dina->get_Nama();
 echo "<br>";
-echo $dina ->get_nim();
+echo $dina->get_Nim();
 echo "<br>";
-echo $dina->get_mata_kuliah();
+echo $dina->get_MataKuliah();
 echo "<br>";
-echo $dina ->get_dosen_killer();
-
-
-
-
-
-
+echo $dina->get_DosenKiller();
+echo "<br>";
+echo $dina->get_citacita();
 ?>
- 
+
 </body>
 </html>
