@@ -11,6 +11,7 @@ class mahasiswa{
   private $dosen_killer;
 
   // Methods
+  function __construct ($Nama, $NIM, $Mata_Kuliah, $Dosen_Killer, $cita_cita ) {
   function set_name($name) {
     $this->name = $name;
   }
@@ -50,13 +51,7 @@ echo "<br>";
 echo $dina->get_mata_kuliah();
 echo "<br>";
 echo $dina ->get_dosen_killer();
-
-
-
-
-
-
-?>
+?
  
 </body>
 </html>
