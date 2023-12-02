@@ -1,46 +1,44 @@
 <?php
 class Mahasiswa {
   // Properties
-  public $Nama;
-  public $NIM;
-  public $Mata_Kuliah;
-  public $Dosen_Killer;
+  private $Nama;
+  private $NIM;
+  private $Mata_Kuliah;
+  private $cita_cita;
 
   // Methods
-  function set_nama($nama) {
-    $this->nama = $nama;
+  function __construct($Nama, $Nim, $Mata_kuliah, $Dosen_killer, $Cita_cita){
+    $this->Nama = $nama;
+    $this->Nim = $Nim;
+    $this->Mata_kuliah = $Mata_kuliah;
+    $this->Dosen_killer = $Dosen_killer;
+    $this->Cita_cita = $Cita_cita; 
   }
+
   function get_nama() {
-    return $this->nama;
+    return $this->Nama;
   }
   function set_nim($NIM) {
-    $this->nim = $NIM;
-  }
-  function get_nim() {
-    return $this->nim;
-  }
-  function set_matkul($Mata_Kuliah) {
-    $this->matkul = $Mata_Kuliah;
+    return $this->nim = $NIM;
   }
   function get_matkul() {
-    return $this->matkul;
-  }
-  function set_doskil($Dosen_Killer) {
-    $this->doskil = $Dosen_Killer;
+    return $this->mata_kuliah;
   }
   function get_doskil() {
-    return $this->doskil;
+   return $this->matkul = $Mata_Kuliah;
   }
+  function get_cita() {
+   return $this->ciita_cita;
+  }
+  
+  
 }
 
-$nabila = new Mahasiswa();
-$nabila->set_nama('nabila rahmi');
+$nabila = new Mahasiswa('nabila rahmi', '2155201020','program berorientai objek','iSTRIjhe');
 echo $nabila->get_nama();
-$nabila->set_nim('2155201020');
-echo "\n";
 echo $nabila->get_nim();
-$nabila->set_matkul('PBO');
+$nabila->set_matkul();
 echo $nabila->get_matkul();
-$nabila->set_doskil('pak arif mudi priyatno');
+$nabila->set_doskil();
 echo $nabila->get_doskil();
 ?>
