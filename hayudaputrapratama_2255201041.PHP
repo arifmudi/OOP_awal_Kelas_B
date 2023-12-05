@@ -2,62 +2,70 @@
 <html>
 <body>
 
-<?php
-class mahasiswa{
-  // Properties
-  private $name;
-  private $nim;
-  private $mata_kuliah;
-  private $dosen_killer;
-  private $cita_cita;
+ <?php
+ class Mahasiswa {
 
-  // Methods
-   function __construct($name,$nim,$mata_kuliah,$dosen_killer,$cita_cita) {
+ private $name;
+ private $nim;
+ private $matakuliah;
+ private $dosenkiller;
+ private $citacita;
+ private $hoby;
+
+  public function __construct($name,$nim,$matakuliah,$dosenkiller,$citacita, $hoby){
     $this->name = $name; 
     $this->nim = $nim; 
-    $this->mata_kuliah = $mata_kuliah; 
-    $this->dosen_killer = $dosen_killer; 
-    $this->cita_cita = $cita_cita; 
-    
+    $this->matakuliah = $matakuliah; 
+    $this->dosenkiller = $dosenkiller; 
+    $this->citacita = $citacita; 
+    $this->hoby = $hoby; 
   }
-  function get_name() {
+  
+   function get_name() {
     return $this->name;
   }
   
-  function get_nim() {
+   function get_nim() {
     return $this->nim;
   }
   
-  function get_mata_kuliah() {
-    return $this->mata_kuliah;
+   function get_matakuliah() {
+    return $this->matakuliah;
   }
  
-  function get_dosen_killer() {
-    return $this->dosen_killer;
+   function get_dosenkiller() {
+    return $this->dosenkiller;
   }
   
-function get_cita_cita() {
-    return $this->cita_cita;
+   function get_citacita() {
+    return $this->citacita;
+  }
+   function get_hoby() {
+    return $this->hoby;
   }
 }
 
-$Hayuda_putra_pratama = new mahasiswa('hayuda','2255201041','pbo','arif mudi priyanto.s.t.m.kom','jadi_pahlawanmu');
+class universitas extends mahasiswa {
+  public function Salam() {
+    echo 'Selamat Datang Di Kampus Kami'; 
+  }
+}
 
-echo $Hayuda_putra_pratama ->get_name();
+$Hayudaputrapratama = new Universitas('hayuda','2255201041','pbo','arif mudi priyanto.s.t.m.kom','jadipahlawanmu','mancingkemarahan');
+echo $Hayudaputrapratama ->Salam();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_nim();
+echo $Hayudaputrapratama ->get_name();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_mata_kuliah();
+echo $Hayudaputrapratama ->get_nim();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_dosen_killer();
+echo $Hayudaputrapratama ->get_matakuliah();
 echo "<br>";
-echo $Hayuda_putra_pratama ->get_cita_cita();
-
-
-
-
-
+echo $Hayudaputrapratama ->get_dosenkiller();
+echo "<br>";
+echo $Hayudaputrapratama ->get_citacita();
+echo "<br>";
+echo $Hayudaputrapratama ->get_hoby();
 ?>
- 
+
 </body>
 </html>
