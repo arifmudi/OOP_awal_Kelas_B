@@ -3,55 +3,68 @@
 <!DOCTYPE html>
 <html>
 <body>
-
 <?php
 class Mahasiswa {
-  // Properties
   private $Nama;
   private $NIM;
-  private $Mata_Kuliah;
-  private $Dosen_Killer;
-  private $cita_cita;
+  private $MataKuliah;
+  private $dosenkiller;
+  private $citacita;
+  private $Hobby;
 
-  // Methods
-  function __construct ($Nama, $NIM, $Mata_Kuliah, $Dosen_Killer, $cita_cita ) {
+
+  public function __construct($Nama, $NIM, $MataKuliah, $dosenkiller, $citacita, $Hobby){
     $this->Nama = $Nama;
     $this->NIM = $NIM;
-    $this->Mata_Kuliah = $Mata_Kuliah;
-    $this->Dosen_Killer = $Dosen_Killer;
-    $this->cita_cita = $cita_cita;
+    $this->MataKuliah = $MataKuliah;
+    $this->dosenkiller = $dosenkiller;
+    $this->citacita = $citacita;
+    $this->Hobby = $Hobby;
   }
+  
+
   function get_Nama() {
     return $this->Nama;
- }
-  function get_NIM() {
+  }
+  function get_NIM(){
     return $this->NIM;
   }
-  function get_Mata_Kuliah() {
-    return $this->Mata_Kuliah;
+  function get_MataKuliah(){
+    return $this->MataKuliah;
   }
-  function get_Dosen_Killer() {
-    return $this->Dosen_Killer;
+  function get_dosenkiller(){
+    return $this->dosenkiller;
   }
- function get_cita_cita() {
-    return $this->cita_cita;
- }
+    function get_citacita(){
+    return $this->citacita;
+  }
+    function get_Hobby(){
+    return $this->Hobby;
+  }
 }
 
-$thoif = new Mahasiswa("Thoif", "2255201026", "PBO", "Pak_Arif", "Belum
-_ada");
+class Universitas extends Mahasiswa {
+  public function Salam() {
+    echo 'Selamat Datang Di Kampus Kami'; 
+  }
+}
 
 
+$thoif = new Universitas('Thoif Setiawan', '2255201026', 'PBO', 'pak arif', 'Bahagia Bersamanya', 'Rebahan');
+echo $thoif->Salam();
+echo "<br>";
 echo $thoif->get_Nama();
 echo "<br>";
 echo $thoif->get_NIM();
 echo "<br>";
-echo $thoif->get_Mata_Kuliah();
+echo $thoif->get_MataKuliah();
 echo "<br>";
-echo $thoif->get_Dosen_Killer();
+echo $thoif->get_dosenkiller();
 echo "<br>";
-echo $thoif->get_cita_cita();
+echo $thoif->get_citacita();
+echo "<br>";
+echo $thoif->get_Hobby();
 ?>
- 
+
 </body>
 </html>
