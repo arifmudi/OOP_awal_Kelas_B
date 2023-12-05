@@ -1,46 +1,47 @@
 <?php
 class Mahasiswa {
   // Properties
-  public $Nama;
-  public $NIM;
-  public $Mata_Kuliah;
-  public $Dosen_Killer;
+  private $Nama;
+  private $NIM;
+  private $Mata_Kuliah;
+  private $Dosen_Killer;
+  private $Cita_cita;
+
 
   // Methods
-  function set_nama($nama) {
-    $this->nama = $nama;
-  }
+  function__construct($Nama, $NIM, $Mata_kuliah, $Dosen_Killer, $Cita_cita){
+  $this->Nama = $Nama;
+  $this->NIM = $NIM;
+  $this->Mata_Kuliah = $Mata_Kuliah;
+  $this->Dosen_Killer  = $Dosen_Killer;
+  $this->Cita_cita = $Cita_cita;
+}
   function get_nama() {
-    return $this->nama;
-  }
-  function set_nim($NIM) {
-    $this->nim = $NIM;
+    return $this->Nama;
   }
   function get_nim() {
-    return $this->nim;
+    return $this->NIM;
   }
-  function set_matkul($Mata_Kuliah) {
-    $this->matkul = $Mata_Kuliah;
+  function get_nim($NIM) {
+    $this->nim = $NIM;
   }
   function get_matkul() {
-    return $this->matkul;
+    return $this->Mata_Kuliah;
   }
-  function set_doskil($Dosen_Killer) {
-    $this->doskil = $Dosen_Killer;
+  function set_dokil() {
+    return $this->Dosen_Killer;
   }
-  function get_doskil() {
-    return $this->doskil;
+  function get_cita() {
+    return $this->Cita_cita;
   }
+ 
+  
 }
 
-$roqi = new Mahasiswa();
-$roqi->set_nama('Roqi Nazif');
+$roqi = new Mahasiswa('Roqi Nazif', '2155201028', 'PBO'
 echo $roqi->get_nama();
-$roqi->set_nim('2155201028');
-echo "\n";
 echo $roqi->get_nim();
-$roqi->set_matkul('PBO');
 echo $roqi->get_matkul();
-$roqi->set_doskil('pak arif mudi priyatno');
-echo $roqi->get_doskil();
-?>
+echo $roqi->get_dokil();
+echo $roqi->get_cita();
+
