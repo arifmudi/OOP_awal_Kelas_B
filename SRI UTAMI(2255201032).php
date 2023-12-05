@@ -7,54 +7,45 @@ class mahasiswa{
   // Properties
   private $name;
   private $nim;
-  private $mata_kuliah;
-  private $dosen_killer;
+  private $matakuliah;
+  private $dosenkiller;
+  private $citacita;
 
-  // Methods
-  function set_name($name) {
+  public function __construct($name,$nim,$matakuliah,$dosenkiller,$citacita){
     $this->name = $name;
-  }
+    $this->nim = $nim;
+    $this->matakuliah = $matakuliah;
+    $this->dosenkiller = $dosenkiller;
+    $this->citacita = $citacita;
+    }
+    
   function get_name() {
     return $this->name;
-  }
-  function set_nim($nim) {
-    $this->nim = $nim;
   }
   function get_nim() {
     return $this->nim;
   }
-   function set_mata_kuliah($mata_kuliah) {
-    $this->mata_kuliah= $mata_kuliah;
+  function get_matakuliah() {
+    return $this->matakuliah;
   }
-  function get_mata_kuliah() {
-    return $this->mata_kuliah;
+  function get_dosenkiller() {
+    return $this->dosenkiller;
   }
-  function set_dosen_killer($dosen_killer) {
-    $this->dosen_killer= $dosen_killer;
-  }
-  function get_dosen_killer() {
-    return $this->dosen_killer;
-  }
+ function get_citacita() {
+    return $this->citacita;
+	}
 }
 
-$sri_utami= new mahasiswa();
-$sri_utami->set_name('Sri_Utami');
-$sri_utami->set_nim('2255201032');
-$sri_utami->set_mata_kuliah('pbo');
-$sri_utami->set_dosen_killer('Arif Mudi Priyanto.s.t.m.kom');
-
-echo $sri_utami->get_name();
+$sriutami = new mahasiswa('sriutami','2255201032','pbo','ArifMudiPriyanto.s.t.m.kom','ibupersit');
+echo $sriutami->get_name();
 echo "<br>";
-echo $sri_utami ->get_nim();
+echo $sriutami->get_nim();
 echo "<br>";
-echo $sri_utami ->get_mata_kuliah();
+echo $sriutami->get_matakuliah();
 echo "<br>";
-echo $sri_utami->get_dosen_killer();
-
-
-
-
-
+echo $sriutami->get_dosenkiller();
+echo "<br>";
+echo $sriutami->get_citacita();
 
 ?>
  
