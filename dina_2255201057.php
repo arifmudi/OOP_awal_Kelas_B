@@ -9,39 +9,33 @@ class mahasiswa{
   private $nim;
   private $mata_kuliah;
   private $dosen_killer;
+  private $citacita;
 
+  public function __construct($nama,$nim,$matakuliah,$dosenkiller,$citacita){
+  $this->nama = $nama;
+  $this->nim = $nim;
+  $this->matakuliah = $matakuliah;
+  $this->dosenkiller = $dosenkiller;
+  $this->citacita = $citacita;
   // Methods
-  function set_name($name) {
-    $this->name = $name;
-  }
   function get_name() {
     return $this->name;
-  }
-  function set_nim($nim) {
-    $this->nim = $nim;
   }
   function get_nim() {
     return $this->nim;
   }
-   function set_mata_kuliah($mata_kuliah) {
-    $this->mata_kuliah= $mata_kuliah;
-  }
   function get_mata_kuliah() {
     return $this->mata_kuliah;
-  }
-  function set_dosen_killer($dosen_killer) {
-    $this->dosen_killer= $dosen_killer;
   }
   function get_dosen_killer() {
     return $this->dosen_killer;
   }
+  function get_citacita() {
+    return $this->citacita;
+  }
 }
 
-$dina = new mahasiswa();
-$dina->set_name('dina');
-$dina->set_nim('2255201057');
-$dina->set_mata_kuliah('pbo');
-$dina->set_dosen_killer('PakArif');
+$dina = new mahasiswa('dina', '2255201057', 'pbo', 'PakArif');
 
 echo $dina->get_name();
 echo "<br>";
@@ -50,8 +44,8 @@ echo "<br>";
 echo $dina->get_mata_kuliah();
 echo "<br>";
 echo $dina ->get_dosen_killer();
-
-
+echo "<br>";
+echo $dina ->get_citacita();
 
 
 
