@@ -11,7 +11,7 @@ class mahasiswa{
   private $dosen_killer;
   private $citacita;
 
-  public function__construct($nama,$nim,$matakuliah,$dosenkiller,$citacita){
+  public function __construct($nama,$nim,$matakuliah,$dosenkiller,$citacita){
   $this->nama = $nama;
   $this->nim = $nim;
   $this->matakuliah = $matakuliah;
