@@ -10,15 +10,15 @@ class mahasiswa{
   private $mata_kuliah;
   private $dosen_killer;
   private $cita_cita;
+  private $hobby;
   
-  // Methods
-  function 
-  __construct($name,$nim,$mata_kuliah,$dosen_killer,$cita_cita){
+  public function __construct($name, $nim, $mata_Kuliah, $dosen_killer, $cita_cita, $hobby){
     $this->name = $name;
     $this->nim = $nim;
-    $this->mata_kuliah = $mata_kuliah;
+    $this->mata_Kuliah = $mata_Kuliah;
     $this->dosen_killer = $dosen_killer;
     $this->cita_cita = $cita_cita;
+    $this->hobby = $hobby;
   }
   
   function get_name(){
@@ -29,8 +29,8 @@ class mahasiswa{
     return $this->nim;
   }
 
-  function get_mata_kuliah() {
-    return $this->mata_kuliah;
+  function get_mata_Kuliah() {
+    return $this->mata_Kuliah;
   }
 
   function get_dosen_killer() {
@@ -40,26 +40,30 @@ class mahasiswa{
   function get_cita_cita() {
     return $this->cita_cita;
   }
+   function get_hobby() {
+    return $this->hobby;
+  }
 }
+class Universitas extends Mahasiswa {
+  public function Salam() {
+    echo 'Selamat Datang Di Kampus Kami'; 
+  }
+} 
 
-$ARSI_DEWI_SAPUTRI = new mahasiswa('ARSI_DEWI_SAPUTRI','2255201002','pbo','arif mudi priyanto','arsitek dan pengusaha');
-
-
+$ARSI_DEWI_SAPUTRI = new Universitas('ARSI','2255201002','pbo','arif mudi priyanto','arsitek dan pengusaha','masak');
+echo $ARSI_DEWI_SAPUTRI ->Salam();
+echo "<br>";
 echo $ARSI_DEWI_SAPUTRI ->get_name();
 echo "<br>";
 echo $ARSI_DEWI_SAPUTRI ->get_nim();
 echo "<br>";
-echo $ARSI_DEWI_SAPUTRI ->get_mata_kuliah();
+echo $ARSI_DEWI_SAPUTRI ->get_mata_Kuliah();
 echo "<br>";
 echo $ARSI_DEWI_SAPUTRI ->get_dosen_killer();
 echo "<br>";
 echo $ARSI_DEWI_SAPUTRI ->get_cita_cita();
-
-
-
-
-
-
+echo "<br>";
+echo $ARSI_DEWI_SAPUTRI ->get_hobby();
 
 ?>
  
