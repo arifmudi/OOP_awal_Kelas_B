@@ -10,14 +10,16 @@ class Mahasiswa {
   private $MataKuliah;
   private $dosenkiller;
   private $citacita;
+  private $hobby;
 
   // Methods
-  public function __construct($Nama, $NIM, $MataKuliah, $dosenkiller, $citacita){
+  public function __construct($Nama, $NIM, $MataKuliah, $dosenkiller, $citacita,$hobby){
     $this->Nama = $Nama;
     $this->NIM = $NIM;
     $this->MataKuliah = $MataKuliah;
     $this->dosenkiller = $dosenkiller;
     $this->citacita = $citacita;
+    $this->hobby = $hobby;
   }
 
   function get_Nama() {
@@ -40,9 +42,19 @@ class Mahasiswa {
     return $this -> citacita;
 
   }
-}
+  function get_hobby(){
+    return $this -> hobby;
 
-$Desriinsani = new Mahasiswa('Desriinsani', '2255201010', 'PBO', 'Melati', 'masuk syurga');
+  }
+}
+class universitas extends Mahasiswa {
+  public function Salam (){
+    echo 'Selamat datang di kampus kami';
+  }
+}
+$DesriInsani = new universitas('Desriinsani', '2255201016', 'PBO', 'Melati', 'masuk syurga','Tidur');
+echo $DesriInsani->Salam ();
+echo"<br>";
 echo $DesriInsani->get_Nama();
 echo "<br>";
 echo $DesriInsani->get_NIM();
@@ -52,6 +64,8 @@ echo "<br>";
 echo $DesriInsani->get_dosenkiller();
 echo "<br>";
 echo $DesriInsani->get_citacita();
+echo"<br>";
+echo $DesriInsani->get_hobby();
 
 ?>
  
