@@ -6,14 +6,16 @@ class Mahasiswa {
   private $Mata_Kuliah;
   private $Dosen_Killer;
   private $citacitaden;
+  private $hobiden;
 
   // Methods
-   public function __construct($Nama, $NIM, $Mata_Kuliah, $Dosen_Killer, $citacitaden){
+   public function __construct($Nama, $NIM, $Mata_Kuliah, $Dosen_Killer, $citacitaden, $hobiden){
     $this->Nama = $Nama;
     $this->NIM = $NIM;
     $this->Mata_Kuliah = $Mata_Kuliah;
     $this->Dosen_Killer = $Dosen_Killer;
     $this->citacitaden =  $citacitaden;
+    $this->hobiden =  $hobiden;
  }    
   function get_Nama() {
     return $this->Nama;
@@ -30,9 +32,20 @@ class Mahasiswa {
     function get_citacitaden() {
     return $this->citacitaden;
   }
+    function get_hobiden() {
+    return $this->hobiden;
+  }
 }
 
-$almann = new Mahasiswa('alman', '2255201001', 'pbo', 'pak arif', 'rangkayo');
+class Universitas extends Mahasiswa {
+  public function Salam() {
+    echo 'Selamat Datang Di Kampus Kami'; 
+   }
+}
+
+$almann = new Universitas('alman', '2255201001', 'pbo', 'pak arif', 'rangkayo', 'tekan hp');
+echo $almann->salam();
+echo "<br>";
 echo $almann->get_Nama();
 echo "<br>";
 echo $almann->get_NIM();
@@ -42,5 +55,7 @@ echo "<br>";
 echo $almann->get_Dosen_Killer();
 echo "<br>";
 echo $almann->get_citacitaden();
+echo "<br>";
+echo $almann->get_hobiden();
 echo "<br>";
 ?>
