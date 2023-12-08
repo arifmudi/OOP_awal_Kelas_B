@@ -10,14 +10,16 @@ class Mahasiswa {
   private $MataKuliah;
   private $DosenKiller;
   private $Citacita;
+  private $Hobby;
 
   // Methods
-  function __construct($Nama,$Nim,$MataKuliah,$DosenKiller,$Citacita) {
+  function __construct($Nama,$Nim,$MataKuliah,$DosenKiller,$Citacita,$Hobby) {
     $this->Nama = $Nama;
     $this->Nim = $Nim;
     $this->MataKuliah = $MataKuliah;
     $this->DosenKiller = $DosenKiller;
     $this->Citacita = $Citacita;
+    $this->Hobby = $Hobby;
   }
   function get_Nama() {
     return $this->Nama;
@@ -34,10 +36,21 @@ class Mahasiswa {
   function get_Citacita() {
     return $this->Citacita;
   }
+  function get_Hobby() {
+    return $this->Hobby;
+  }
   
 }
 
-$EraDwiMustika = new Mahasiswa('EraDwiMustika','2255201017','Pbo','era','sukses');
+class Universitas extends Mahasiswa {
+  public function Salam() {
+    echo 'Selamat Datang Di Kampus Kami';
+  }
+}
+
+$EraDwiMustika = new Universitas('EraDwiMustika','2255201017','Pbo','era','sukses','dolan');
+echo $EraDwiMustika->Salam();
+echo "<br>";
 echo $EraDwiMustika->get_Nama();
 echo "<br>";
 echo $EraDwiMustika->get_Nim();
@@ -47,6 +60,8 @@ echo "<br>";
 echo $EraDwiMustika->get_DosenKiller();
 echo "<br>";
 echo $EraDwiMustika->get_Citacita();
+echo "<br>";
+echo $EraDwiMustika->get_Hobby();
 
 ?>
  
