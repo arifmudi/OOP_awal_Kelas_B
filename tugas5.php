@@ -33,13 +33,13 @@ class Mahasiswa {
   }
 }
 
-$djoel = new Mahasiswa();
-$djoel->set_nama('Roqi Nazif');
-echo $djoel->get_nama();
-$djoel->set_nim('2155201028s');
-echo $djoel->get_nim();
-$djoel->set_matkul('program berorientasi objek');
-echo $djoel->get_matkul();
-$djoel->set_dokil('bapak arif mudi priyatno');
-echo $djoel->get_dokil();
+$Roqi = new Mahasiswa();
+$Roqi->set_nama('Roqi Nazif');
+echo $Roqi->get_nama();
+$Roqi->set_nim('2155201028s');
+echo $Roqi->get_nim();
+$Roqi->set_matkul('program berorientasi objek');
+echo $Roqi->get_matkul();
+$Roqi->set_dokil('bapak arif mudi priyatno');
+echo $Roqi->get_dokil();
 ?>
